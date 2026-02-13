@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="home.js">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-11 mg-auto">
+                <div class="left-container">
+                    <div class="product-title">
+                        <h4>Shopping Cart</h4>
+                        <p><span class="ItemNo"></span> Item</p>
+                    </div>
+                    <div id="myTable" class="table">
+                        <table id="dataTable">
+                            <thead class="thead">
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div id="cartMessage">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-11 mg-auto">
+                <div class="right-container">
+                    
+                    <div class="item-total">
+                        <p class="order-title">Total Cost <span class="ItemNo"></span></p>
+                        <p class="order-title">&#8364;<span id="total" class="total"></span></p>
+                    </div>
+                   
+                   
+                   
+                    <div class="proceedBtn">
+                        <!-- <button  role="button">Button 55</button> -->
+                        <a href="javascript:void(0);" class="pbtn">Proceed to Pay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+    <script>
+function loadCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const tbody = document.querySelector("tbody");
+    const thead = document.querySelector("thead");
+    
+    if(cart.length === 0){
+        document.getElementById("cartMessage").innerHTML = "<p>Your cart is empty!</p>";
+        return;
+    }
+
+    let tab = `<tr>
+        <th>Image</th>
+        <th>Product Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Remove</th>
+    </tr>`;
+
+    let rows = "";
+    cart.forEach((item, index) => {
+        rows += `<tr>
+            <td><img src="${item.img}" width="50"></td>
+            <td>${item.title}</td>
+            <td>
+                <input type="number" class="qty" data-index="${index}" value="${item.quantity}" min="1">
+            </td>
+            <td>${item.price}</td>
+            <td>${item.price * item.quantity}</td>
+            <td><button class="remove" data-index="${index}">X</button></td>
+        </tr>`;
+    });
+
+    thead.innerHTML = tab;
+    tbody.innerHTML = rows;
+
+    updateTotals();
+
+    // quantity change
+    document.querySelectorAll('.qty').forEach(input => {
+        input.addEventListener('change', (e) => {
+            const idx = e.target.dataset.index;
+            cart[idx].quantity = parseInt(e.target.value) || 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        });
+    });
+
+    // remove button
+    document.querySelectorAll('.remove').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const idx = e.target.dataset.index;
+            cart.splice(idx, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        });
+    });
+}
+
+function updateTotals() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalElem = document.querySelector('.total');
+    const sum = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    if(totalElem) totalElem.innerText = sum;
+}
+
+document.addEventListener('DOMContentLoaded', loadCart);
+</script>
+
+</body>
+</html>

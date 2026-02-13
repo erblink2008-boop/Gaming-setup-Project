@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="home.js">
+    
+
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; } header { background-color: #333; color: white; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; } .menyt { list-style-type: none; margin: 0; padding: 0; display: flex; } .menyt li { margin-right: 20px; } .menyt li a { color: white; text-decoration: none; } .Cart { list-style-type: none; margin: 0; padding: 0; } .Cart li button { background-color: #555; color: white; border: none; padding: 10px 20px; cursor: pointer; } .products { display: flex; justify-content: space-around; padding: 20px; } .product { border: 1px solid #ccc; padding: 10px; text-align: center; }
+
+
+</style>
+</head>
+<body>
+    <header style="position: fixed; width: 100%;">
+        <img src="logo1.png" alt="Logo" width="100" height="100"> <h1>Gaming Computer shop</h1>
+        <ul class="menyt">
+            <li><a href="">Home</a></li>
+            <li><a href="#products2" >Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#address">Contact</a></li>
+        </ul>
+        <ul class="Cart">
+            <li><a href="shporta.html"><button style="width: 100px; height: 70px; font-size: 35px; background-color: #383030; color: white; border: none; cursor: pointer;">🛒</button></a></li>
+        </ul>
+    </header>
+
+    <section style="padding: 20px; text-align: center; background-image: url('background.png'); background-size: cover; background-position: center;
+    color: antiquewhite; width: 100%; height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 25px; font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5);
+    background-attachment: fixed; 
+
+
+     ">
+        <h2>Welcome to Our Gaming Computer Shop</h2>
+        <b>We offer a wide range of high-performance gaming PCs designed to meet the needs of gamers of all levels. Whether you're a hardcore gamer looking for the latest and greatest hardware or a casual gamer seeking a budget-friendly option, we have something for everyone. Our products are built with top-quality components to ensure smooth gameplay and an immersive gaming experience. Browse our selection and find the perfect gaming PC to elevate your gaming adventures!</b>
+        
+    </section>
+
+
+ <main> 
+    <section class="products" style="display: flex; justify-content: space-around; padding: 20px;
+    background-color: #262020;
+    color: white;
+    font-size: 18px; font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5);
+    border: 3px solid #ccc; border-radius: 10px; text-align: center;"> 
+        <div class="product" style="border: 3px solid #ccc; border-radius: 10px; padding: 10px;"> 
+            <img src="pc1.jpg" alt="Product 1" width="200" height="150"> 
+            <h2>Gaming PC 1</h2> 
+            <p>High-performance gaming computer with the latest graphics card and processor.</p> 
+             
+        </div> 
+
+        <div class="product" style="border: 3px solid #ccc; border-radius: 10px; padding: 10px;"> 
+            <img src="pc2.png" alt="Product 2" width="200" height="150"> 
+            <h2>Gaming PC 2</h2> 
+            <p>Powerful gaming rig with RGB lighting and liquid cooling system.</p> 
+           
+        </div>
+
+        <div class="product" style="border: 3px solid #ccc; border-radius: 10px; padding: 10px;"> 
+            <img src="pc3.png" alt="Product 3" width="200" height="150"> 
+            <h2>Gaming PC 3</h2>   
+            <p>Budget-friendly gaming computer with solid performance for  casual gamers.</p> 
+            
+        </div> 
+    </section> 
+ </main>
+
+
+
+
+<section>
+    <select 
+        style="display: block; margin: 20px auto; padding: 10px; font-size: 16px; border: 2px solid #000; border-radius: 20px; text-align: center; color: #000; font-weight: bold; transition: 0.3s;" 
+        onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" 
+        onmouseout="this.style.backgroundColor=''; this.style.color='#000';"
+        onchange="scrollToSection(this.value);"
+    >
+        <option value="" selected>Select Option</option>
+        <option value="products2">Gaming PC</option>
+        <option value="gaming-keyboard">Gaming keyboard</option>
+        <option value="gaming-mouse">Gaming mouse</option>
+    </select>
+</section>
+
+<script>
+function scrollToSection(id) {
+    if(id) {
+        const section = document.getElementById(id);
+        if(section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+}
+</script>
+
+
+
+
+
+
+
+<section style="text-align: center;" id="products2">
+    <h2 style="color: #f0f0f0; background-color: #333; padding: 10px;">Buy our Gaming PCs</h2>
+     <div style=" display: flex; justify-content: space-around; padding: 20px; background-color: #ffffff; color: rgb(0, 0, 0); font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5); border: 3px solid #000000; border-radius: 10px; flex-wrap: wrap;">
+        <div style="text-align: center; padding: 20px;"><img src="price1.png" alt="" style="width: 400px;"><br>
+            GPU: NVIDIA GeForce RTX 5090 32 GB GDDR7 📊<br>
+         CUDA Cores: ~21,760 🧠<br>
+         Memorie: 32 GB GDDR7 <br>
+         Interfejs: PCIe Gen5 <br>
+         CPU: AMD Ryzen 9 <br>
+         RAM: 32 GB DDR5 <br>
+         Storage: 1 TB SSD NVMe <br>
+        Power Supply: 1000 W+ <br> 
+        <b>€4,500</b>
+        <a href="javascript:void(0);" 
+
+            
+         data-id="price1"
+       data-name="NVIDIA GeForce RTX 5090 32 GB GDDR7"  
+       data-price="4500"
+       data-img="price1.png"
+       onclick="shtoNeShporte(this)" 
+
+
+
+        style="display: block; text-align: center; margin-top: 10px; display: inline-block; 
+        text-align: center; 
+        margin-top: 10px; 
+        padding: 10px 20px; 
+        border: 2px solid #000; 
+        border-radius: 20px; 
+        text-decoration: none; 
+        color: #000;
+        font-weight: bold;
+        transition: 0.3s;
+        "
+        onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';"
+        onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div> 
+
+        <div style="text-align: center; padding: 20px;"><img src="price2.png" alt="" style="width: 400px"><br><br> GPU: NVIDIA GeForce RTX 5080 24 GB GDDR7 📊<br> CUDA Cores: ~16,384 🧠<br> Memorie: 24 GB GDDR7 <br> Interfejs: PCIe Gen5 <br> CPU: AMD Ryzen 7 <br> RAM: 16 GB DDR5 <br> Storage: 512 GB SSD NVMe <br> Power Supply: 750 W+ <br> <b>€3,800</b> <a href="javascript:void(0);" 
+
+            
+         data-id="price2"
+       data-name="NVIDIA GeForce RTX 5080 24 GB GDDR7"  
+       data-price="3800"
+       data-img="price2.png"
+       onclick="shtoNeShporte(this)"  
+        
+        
+        style="display: block; text-align: center; margin-top: 10px; display: inline-block; 
+        text-align: center; 
+        margin-top: 10px; 
+        padding: 10px 20px; 
+        border: 2px solid #000; 
+        border-radius: 20px; 
+        text-decoration: none; 
+        color: #000;
+        font-weight: bold;
+        transition: 0.3s;
+        "
+        onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';"
+        onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div> 
+
+        <div style="text-align: center; padding: 20px;"><img src="price3.png" alt="" style="width: 400px;"><br><br> GPU: NVIDIA GeForce RTX 5070 16 GB GDDR7 📊<br> CUDA Cores: ~12,288 🧠<br> Memorie: 16 GB GDDR7 <br> Interfejs: PCIe Gen5 <br> CPU: AMD Ryzen 5 <br> RAM: 16 GB DDR5 <br> Storage: 512 GB SSD NVMe <br> Power Supply: 650 W+ <br> <b>€3,000</b> <a href="javascript:void(0);" 
+
+            
+         data-id="price3"
+       data-name="NVIDIA GeForce RTX 5070 16 GB GDDR7"  
+       data-price="3000"
+       data-img="price3.png"
+       onclick="shtoNeShporte(this)" 
+        
+        
+        style="display: block; text-align: center; margin-top: 10px; display: inline-block; 
+        text-align: center; 
+        margin-top: 10px; 
+        padding: 10px 20px; 
+        border: 2px solid #000; 
+        border-radius: 20px; 
+        text-decoration: none; 
+        color: #000;
+        font-weight: bold;
+        transition: 0.3s;
+     "
+        onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';"
+        onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+        
+        <div style="text-align: center; padding: 20px;">
+            <img src="price4.png" alt="Special Offer" style="width: 400px;"><br><br>  GPU: NVIDIA GeForce RTX 5060 8 GB GDDR6 📊<br>
+             CUDA Cores: ~4,608 🧠<br>
+             Memorie: 8 GB GDDR6 <br>
+             Interfejs: PCIe Gen4/Gen5 <br>
+             CPU: AMD Ryzen 5 <br>
+             RAM: 16 GB DDR5 <br>
+             Storage: 512 GB SSD NVMe <br>
+             Power Supply: 650 W+ <br> <b>€2,600</b> <a href="javascript:void(0);" 
+
+            
+         data-id="price4"
+       data-name="NVIDIA GeForce RTX 5060 8 GB GDDR6"  
+       data-price="2600"
+       data-img="price4.png"
+       onclick="shtoNeShporte(this)" 
+             
+             
+             style="display: block; text-align: center; margin-top: 10px; display: inline-block; 
+             text-align: center; 
+             margin-top: 10px; 
+             padding: 10px 20px; 
+             border: 2px solid #000; 
+             border-radius: 20px; 
+             text-decoration: none; 
+             color: #000;
+             font-weight: bold;
+             transition: 0.3s;
+             " 
+            onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';"
+            onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a>
+        </div>
+
+        <div><img src="price5.png" alt="Special Offer" style="width: 400px;"><br><br>
+        GPU: NVIDIA GeForce RTX 4090 24 GB GDDR6X  <br>
+        CUDA Cores: ~16,384 <br>
+        Memorie: 24 GB GDDR6X <br>
+        Interfejs: PCIe Gen5 <br>
+        CPU: AMD Ryzen 9 <br>
+        RAM: 32 GB DDR5 <br>
+        Storage: 1 TB SSD NVMe <br>
+        Power Supply: 850 W+ <br>
+        <b>€2,500</b><a href="javascript:void(0);" 
+
+            
+         data-id="price5"
+       data-name="NVIDIA GeForce RTX 4090 24 GB GDDR6X"  
+       data-price="2500"
+       data-img="price5.png"
+       onclick="shtoNeShporte(this)"  
+        
+        
+        style="display: block; text-align: center; margin-top: 10px; display: inline-block; 
+        text-align: center; 
+        margin-top: 10px; 
+        padding: 10px 20px; 
+        border: 2px solid #000; 
+        border-radius: 20px; 
+        text-decoration: none; 
+        color: #000;
+        font-weight: bold;
+        transition: 0.3s;
+     "
+        onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';"
+        onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+
+        <div style="text-align: center; padding: 20px;"><img src="price6.png" alt="Special Offer" style="width: 400px; height: 375px;"><br><br> GPU: NVIDIA GeForce RTX 4080 16 GB GDDR6X <br> CUDA Cores: ~9,728 <br> Memorie: 16 GB GDDR6X <br> Interfejs: PCIe Gen5 <br> CPU: AMD Ryzen 7 <br> RAM: 16 GB DDR5 <br> Storage: 512 GB SSD NVMe <br> Power Supply: 750 W+ <br> <b>€2,200</b><a href="javascript:void(0);" 
+
+            
+         data-id="price6"
+       data-name="NVIDIA GeForce RTX 4080 16 GB GDDR6X"  
+       data-price="2200"
+       data-img="price6.png"
+       onclick="shtoNeShporte(this)"  
+            
+            
+            style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+
+        <div style="text-align: center; padding: 20px;"><img src="price7.png" alt="Special Offer" style="width: 400px; height: 375px;"><br><br> GPU: NVIDIA GeForce RTX 4070 12 GB GDDR6X <br> CUDA Cores: ~5,888 <br> Memorie: 12 GB GDDR6X <br> Interfejs: PCIe Gen5 <br> CPU: AMD Ryzen 5 <br> RAM: 16 GB DDR5 <br> Storage: 512 GB SSD NVMe <br> Power Supply: 650 W+ <br> <b>€1,800</b><a href="javascript:void(0);" 
+
+            
+         data-id="price8"
+       data-name="NVIDIA GeForce RTX 4070 12 GB GDDR6X"  
+       data-price="1800"
+       data-img="price7.png"
+       onclick="shtoNeShporte(this)" 
+            
+            
+            style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+
+        <div style="text-align: center; padding: 20px;"><img src="price8.png" alt="Special Offer" style="width: 400px; height: 375px;"><br><br> GPU: NVIDIA GeForce RTX 4060 8 GB GDDR6 <br> CUDA Cores: ~3,072 <br> Memorie: 8 GB GDDR6 <br> Interfejs: PCIe Gen5 <br> CPU: AMD Ryzen 5 <br> RAM: 16 GB DDR5 <br> Storage: 512 GB SSD NVMe <br> Power Supply: 650 W+ <br> <b>€1,300</b><a href="javascript:void(0);" 
+
+            
+         data-id="price8"
+       data-name="NVIDIA GeForce RTX 4060 8 GB GDDR6"  
+       data-price="1300"
+       data-img="price8.png"
+       onclick="shtoNeShporte(this)"  
+            
+            
+            
+            style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+
+        
+        
+
+     </div>
+
+</section>
+
+
+
+
+
+<section style="text-align: center"; id="gaming-keyboard"> <h2 style="color: #f0f0f0; background-color: #333; padding: 10px;">Gaming Keyboards</h2> <div style=" display: flex; justify-content: space-around; padding: 20px; background-color: #ffffff; color: rgb(0, 0, 0); font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5); border: 3px solid #000000; border-radius: 10px; flex-wrap: wrap;"> <div style="text-align: center; padding: 20px;"> <img src="keyboard1.png" alt="" style="width: 400px;"><br><br>
+    Razer BlackWidow V4 Pro white. <br>
+    <b>€150</b><a href="javascript:void(0);" 
+
+            
+         data-id="keyboard1"
+       data-name="Razer BlackWidow V4 Pro white"  
+       data-price="150"
+       data-img="keyboard1.png"
+       onclick="shtoNeShporte(this)" 
+    
+    
+    style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div> <div style="text-align: center; padding: 20px;"> <img src="keyboard2.png" alt="" style="width: 400px;"><br><br>
+        Razer Huntsman Mini black. <br>
+        <b>€120</b><a href="javascript:void(0);" 
+
+            
+         data-id="keyboard2"
+       data-name="Razer Huntsman Mini black"  
+       data-price="120"
+       data-img="keyboard2.png"
+       onclick="shtoNeShporte(this)"
+        
+        
+        style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div> <div style="text-align:center ; padding :25 px;"> <img src="keyboard3.png" alt="" style="width : 400px;"><br><br> 
+            65% Mechanical keyboard pink with white. <br>
+            <b>€185</b> <a href="javascript:void(0);" 
+
+            
+            data-id="keyboard3"
+       data-name="65% Mechanical keyboard pink with white."  
+       data-price="185"
+       data-img="keyboard3.png"
+       onclick="shtoNeShporte(this)"
+            
+            
+            style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+</section>
+
+
+
+
+
+
+
+
+<section style="text-align: center"; id="gaming-mouse"> <h2 style="color: #f0f0f0; background-color: #333; padding: 10px;">Gaming mouse</h2> <div style=" display: flex; justify-content: space-around; padding: 20px; background-color: #ffffff; color: rgb(0, 0, 0); font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5); border: 3px solid #000000; border-radius: 10px; flex-wrap: wrap;"> <div style="text-align: center; padding: 20px;"> <img src="mouse1.png" alt="" style="width: 400px;"><br><br> 
+     Logitech's new wireless gaming mouse, <br>
+     
+       <details>
+        <summary>See more</summary>
+        <p>
+            the Logitech G Pro X Superlight, <br>
+      is designed for esports professionals <br>
+      and gamers who demand the best performance and precision. <br>
+            It features Logitech's HERO 25K sensor with up to 25,600 DPI sensitivity, <br>
+        customizable RGB lighting, and a lightweight design weighing only 63 grams. <br>
+         The mouse also has Logitech's LIGHTSPEED wireless technology for low latency and fast response times, making it ideal for competitive gaming. <br>
+          With its durable build and advanced features, the Logitech G Pro X Superlight is a great choice for gamers looking for a high-quality wireless gaming mouse. <br>
+        </p>
+       </details>
+    <b>€80</b><a href="javascript:void(0);" 
+
+            
+            data-id="mouse1"
+       data-name="Logitech's new wireless gaming mouse,"  
+       data-price="80"
+       data-img="mouse1.png"
+       onclick="shtoNeShporte(this)" 
+       
+
+
+
+
+
+    style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';"> Buy Now</a></div> <div style="text-align: center; padding: 20px;"> <img src="mouse2.png" alt="" style="width: 300px;"><br><br>
+        Razer DeathAdder V2 Pro-Black.
+            <details>
+            <summary>See more</summary>
+          <p style="flex-wrap: wrap;">
+            is a wireless gaming mouse <br>
+         that offers high performance and precision for gamers. <br>
+    It features Razer's Focus+ optical sensor with up to 20,000 DPI sensitivity, <br>
+     customizable RGB lighting, and a comfortable ergonomic design. <br> The mouse also has Razer's HyperSpeed wireless technology <br>
+      for low latency and fast response times, making it ideal for competitive gaming. <br>
+       With its durable build and advanced features, <br> 
+       the Razer DeathAdder V2 Pro is a great choice for gamers looking for a high-quality wireless gaming mouse. <br>
+  </p>
+
+  </details>
+
+        <b>€90</b><a href="javascript:void(0);" 
+
+            
+            data-id="mouse2"
+       data-name="Razer DeathAdder V2 Pro Wireless Gaming Mouse - Black"  
+       data-price="90"
+       data-img="mouse2.png"
+       onclick="shtoNeShporte(this)"
+        
+        
+        
+        style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div> <div style="text-align:center ; padding :25 px;"> <img src="mouse3.png" alt="" style="width : 230px;"><br><br>
+            Logitech G PRO X Superlight Wireless Gaming Mouse - White <br>
+             <details>
+                <summary>See more</summary>
+                <p>
+                    is a high-performance gaming mouse designed for esports professionals and gamers who demand the best performance. <br>
+              It features Logitech's HERO 25K sensor with up to 25,600 DPI sensitivity, <br>
+               customizable RGB lighting, and a lightweight design weighing only 63 grams. <br>
+                The mouse also has Logitech's LIGHTSPEED wireless technology for low latency and <br> fast response times, making it ideal for competitive gaming. <br>
+                 With its durable build and advanced features, the Logitech G PRO X Superlight is a <br> great choice for gamers looking for a high-quality wireless gaming mouse. <br>
+                </p>
+             </details>
+            <b>€85</b> <a href="javascript:void(0);" 
+
+            
+         data-id="mouse3"
+       data-name="Logitech G PRO X Superlight Wireless Gaming Mouse - White"  
+       data-price="85"
+       data-img="mouse3.png"
+       onclick="shtoNeShporte(this)"
+            
+            style="display: block; text-align: center; margin-top: 10px; display: inline-block; text-align: center; margin-top: 10px; padding: 10px 20px; border: 2px solid #000; border-radius: 20px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; " onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor=''; this.style.color='#000';">Buy Now</a></div>
+</section>
+
+
+
+  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="address" style="background-color: #333; color: white; padding: 20px; font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5); border: 3px solid #000; border-radius: 10px; margin: 20px;">
+   <address style="color: white;">
+        <h2 style="color: #f0f0f0; background-color: #333; padding: 10px;">Contact Us</h2>
+        <p style="padding: 20px; text-align: center; color: white;">If you have any questions or need assistance, please feel free to contact us:</p>
+        <p style="padding: 20px; text-align: center;">
+            Email: erblin.k2008@gmail.com<br>
+            Phone: +381 631 646 873<br>
+            Address: Rr. "Rruga Rahovice" Preshev
+
+   </address> 
+</section>
+
+
+
+
+
+<section id="about" style="background-color: #333; color: white; padding: 20px; font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5); border: 3px solid #000; border-radius: 10px; margin: 20px;">
+    <h2>About Us</h2>
+    <p>
+This website was created out of a genuine passion for gaming and technology. The idea was born from the desire to share carefully selected, high-quality products with the gaming community.
+
+Although we are not a large corporation, we are committed to professionalism, transparency, and delivering real value to every visitor. Each product featured on our platform is chosen with a strong focus on quality, performance, and overall user experience.
+
+Our goal is to build a trusted space where gaming enthusiasts can discover equipment and accessories that truly enhance their setup and gameplay.
+
+We believe gaming is more than just entertainment — it is passion, creativity, and community.
+
+Thank you for being part of this journey.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="background-color: #f0f0f0; padding: 20px;color: #333; font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(74, 95, 1, 0.5); border: 3px solid #000; border-radius: 10px; margin: 20px;" id="gaming-mouse">
+    <div>
+<h2 style="text-align: center; padding: 20px; background-color: #333; color: white;">Why Choose Us?</h2> <p style="padding: 20px; text-align: center;">At our Gaming Computer Shop, we are committed to providing our customers with the best gaming experience possible. We offer a wide selection of high-quality gaming PCs that are built to deliver exceptional performance and reliability. Our knowledgeable staff is always ready to assist you in finding the perfect gaming rig that suits your needs and budget. We also provide excellent customer service and support, ensuring that you have a smooth and enjoyable shopping experience with us. Choose us for your gaming computer needs and take your gaming adventures to the next level!</p>
+    </div>
+</section>
+
+ <section>
+<footer style="background-color: #333; color: white; text-align: center; padding: 10px 0;"> <p>&copy; 2024 Gaming Computer Shop. All rights reserved.</p> </footer>
+ </section>
+
+
+
+
+
+
+<script>
+function shtoNeShporte(element) {
+    // Marrim të dhënat (sigurohu që këto atribute ekzistojnë te butoni <a>)
+    let id = element.getAttribute('data-id');
+    let title = element.getAttribute('data-name');
+    let price = parseFloat(element.getAttribute('data-price'));
+    let img = element.getAttribute('data-img') || 'default.jpg'; // shto foto
+
+    let produkti = {
+        id: id,
+        title: title,
+        price: price,
+        img: img,
+        quantity: 1
+    };
+
+    // KUJDES: Emri këtu duhet të jetë 'cart'
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let produktiEkzistues = cart.find(item => item.id === id);
+
+    if (produktiEkzistues) {
+        produktiEkzistues.quantity += 1;
+    } else {
+        cart.push(produkti);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(title + " added to cart!");
+}
+
+
+
+function updateTotals() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalElem = document.getElementById('total');
+    const totalCostElem = document.getElementById('total-cost');
+    const shippingElem = document.getElementById('shipping');
+    
+    const sum = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const shipping = parseFloat(shippingElem.value) || 0;
+
+    if(totalElem) totalElem.innerText = sum.toFixed(2);
+    if(totalCostElem) totalCostElem.innerText = (sum + shipping).toFixed(2);
+    
+    // Përditëso numrin e artikujve
+    document.querySelectorAll('.ItemNo').forEach(el => el.innerText = cart.length);
+}
+
+// Shto këtë që të llogaritet totali kur ndryshon transporti
+document.getElementById('shipping').addEventListener('change', updateTotals);
+</script>
+
+
+</body>
+
+
+</html>
